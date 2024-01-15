@@ -20,7 +20,7 @@ jobs:
         run: echo "VERSION=$(git describe --tags --always)" >> $GITHUB_ENV
 
       - name: Call shared workflow to build and push Docker image
-        uses: ukwa/ukwa-services/.github/workflows/push-to-docker-hub.yml@master
+        uses: ldbiz/ukwa-services/.github/workflows/push-to-docker-hub.yml@w3act_stack_new_build_workflow
         with:
           image_name: ${{ github.repository }}
           version: ${{ env.VERSION }}
