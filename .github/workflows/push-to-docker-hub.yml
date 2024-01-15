@@ -9,6 +9,9 @@ on:
       
 jobs:
   push_to_docker_hub:
+    name: Push Docker image to Docker Hub
+    # This uses the default metadata-action configuration, see https://github.com/docker/metadata-action
+    # Pushes to master should build `ukwa/w3act:master`, tags should build `ukwa/w3act:TAG` and update `ukwa/w3act:latest` to refer to TAG.
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
