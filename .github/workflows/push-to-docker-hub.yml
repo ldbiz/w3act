@@ -26,7 +26,7 @@ jobs:
   push_to_docker_hub:
     # Pushes to master (default version) should build `ukwa/w3act:master`, version tags should build `ukwa/w3act:TAG` and update `ukwa/w3act:latest` to refer to TAG.
     needs: setup
-    uses: ukwa/ukwa-services/.github/workflows/push-to-docker-hub.yml@master
+    uses: ldbiz/ukwa-services/.github/workflows/push-to-docker-hub.yml@w3act_stack_new_build_workflow
     with:
       image_name: ${{ github.repository }}
       version: ${{ needs.setup.outputs.version }}
